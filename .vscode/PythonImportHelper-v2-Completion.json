@@ -1,0 +1,53 @@
+[
+    {
+        "label": "CajeroAutomatico",
+        "importPath": "model",
+        "description": "model",
+        "isExtraImport": true,
+        "detail": "model",
+        "documentation": {}
+    },
+    {
+        "label": "CajeroView",
+        "importPath": "view",
+        "description": "view",
+        "isExtraImport": true,
+        "detail": "view",
+        "documentation": {}
+    },
+    {
+        "label": "CajeroController",
+        "importPath": "controller",
+        "description": "controller",
+        "isExtraImport": true,
+        "detail": "controller",
+        "documentation": {}
+    },
+    {
+        "label": "CajeroController",
+        "kind": 6,
+        "importPath": "controller",
+        "description": "controller",
+        "peekOfCode": "class CajeroController:\n    def __init__(self):\n        self.cajero = CajeroAutomatico()\n        self.view = CajeroView()\n    def run(self):\n        while True:\n            self.view.show_menu()\n            option = int(input(\"Ingrese una opción: \"))\n            if option == 1:\n                self.cajero.depositarSaldo()",
+        "detail": "controller",
+        "documentation": {}
+    },
+    {
+        "label": "CajeroAutomatico",
+        "kind": 6,
+        "importPath": "model",
+        "description": "model",
+        "peekOfCode": "class CajeroAutomatico:\n    def __init__(self):\n        self.saldo = 0\n    def depositarSaldo(self):\n        print(\"Ingresar Saldo\")\n        monto = float(input(\"Ingrese monto a depositar: \"))\n        self.saldo += monto\n        print(f\"Se depositaron {monto} unidades. Saldo total: {self.saldo}\")\n    def girarSaldo(self):\n        print(\"Girando saldo\")",
+        "detail": "model",
+        "documentation": {}
+    },
+    {
+        "label": "CajeroView",
+        "kind": 6,
+        "importPath": "view",
+        "description": "view",
+        "peekOfCode": "class CajeroView:\n    @staticmethod\n    def show_menu():\n        print(\"\\nOpciones del menú\\n\")\n        print(\"1. Depositar Saldo\")\n        print(\"2. Girar saldo\")\n        print(\"3. Ver Saldo en la cuenta\")\n        print(\"4. Salir\")",
+        "detail": "view",
+        "documentation": {}
+    }
+]
