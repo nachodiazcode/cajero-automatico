@@ -40,6 +40,22 @@ El programa muestra un menú interactivo en la terminal. Selecciona una opción 
 
 Este proyecto se distribuye bajo la Licencia MIT, lo que permite la libre utilización, modificación y distribución, incluyendo el aviso de copyright y la declaración de la licencia.
 
+
+¡Claro! Puedes empezar con una versión inicial, como la 0.0.1, y luego seguir incrementando los números de versión a medida que hagas cambios importantes en tu proyecto. Aquí tienes un ejemplo de cómo podría ser el registro de cambios para la versión 0.0.1:
+
+CHANGELOG.md
+markdown
+Copy code
+
+# Registro de Cambios (CHANGELOG)
+
+## [v0.0.1] - Fecha
+
+### Añadido
+- Inicialización del proyecto.
+- Funcionalidades básicas: depósito, giro y consulta de saldo.
+- Estructura MVC básica con archivos `modelo.py`, `vista.py` y `controlador.py`.
+
 ---
 
 Programado 100% en Python por NachoDíazCode
