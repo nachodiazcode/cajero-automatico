@@ -1,5 +1,7 @@
 # Cajero Automático
 
+![Cajero Automático](url_de_la_imagen.jpg)
+
 Este proyecto implementa un cajero automático en Python con las siguientes funcionalidades:
 
 - **Depositar Saldo:** Agrega fondos a la cuenta.
@@ -26,36 +28,27 @@ Para utilizar el programa:
 
 El programa muestra un menú interactivo en la terminal. Selecciona una opción ingresando su número correspondiente.
 
-## Contribución
+## Funcionalidad de Autenticación (Auth)
 
-¡Tu colaboración es bienvenida! Sigue estos pasos:
+### Descripción
 
-1. Haz un fork del repositorio.
-2. Crea una nueva rama (`git checkout -b feature/Contribución`).
-3. Realiza y confirma tus cambios (`git commit -am 'Agrega tu contribución'`).
-4. Realiza el push a la rama (`git push origin feature/Contribución`).
-5. Crea un nuevo Pull Request.
+La funcionalidad de autenticación (`auth`) agrega la capacidad de registrar nuevos usuarios y permitirles iniciar sesión para acceder al cajero automático.
 
-## Licencia
+### Uso
 
-Este proyecto se distribuye bajo la Licencia MIT, lo que permite la libre utilización, modificación y distribución, incluyendo el aviso de copyright y la declaración de la licencia.
+La autenticación proporciona dos funciones principales:
 
+- `registrarse`: Permite a los usuarios registrar un nuevo nombre de usuario y contraseña.
+- `iniciarSesion`: Permite a los usuarios iniciar sesión utilizando su nombre de usuario y contraseña registrados.
 
-¡Claro! Puedes empezar con una versión inicial, como la 0.0.1, y luego seguir incrementando los números de versión a medida que hagas cambios importantes en tu proyecto. Aquí tienes un ejemplo de cómo podría ser el registro de cambios para la versión 0.0.1:
+### Implementación
 
-CHANGELOG.md
-markdown
-Copy code
+La lógica de autenticación se encuentra en el archivo `auth.py`, el cual contiene la clase `AuthManager`. Esta clase gestiona el registro e inicio de sesión de usuarios mediante el uso de un diccionario para almacenar los nombres de usuario y las contraseñas.
 
-# Registro de Cambios (CHANGELOG)
+### Ejemplo de Uso
 
-## [v0.0.1] - Fecha
+Para registrar un nuevo usuario:
 
-### Añadido
-- Inicialización del proyecto.
-- Funcionalidades básicas: depósito, giro y consulta de saldo.
-- Estructura MVC básica con archivos `modelo.py`, `vista.py` y `controlador.py`.
-
----
-
-Programado 100% en Python por NachoDíazCode
+```python
+auth_manager = AuthManager()
+auth_manager.registrarse()
