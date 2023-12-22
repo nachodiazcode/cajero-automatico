@@ -45,14 +45,6 @@ La autenticación proporciona dos funciones principales:
 
 La lógica de autenticación se encuentra en el archivo `auth.py`, el cual contiene la clase `AuthManager`. Esta clase gestiona el registro e inicio de sesión de usuarios mediante el uso de un diccionario para almacenar los nombres de usuario y las contraseñas.
 
-### Ejemplo de Uso
-
-Para registrar un nuevo usuario:
-
-```python
-auth_manager = AuthManager()
-auth_manager.registrarse()
-
 ## Conexión a la Base de Datos PostgreSQL 16
 
 ### Descripción
@@ -64,11 +56,11 @@ El proyecto ahora incluye la capacidad de conectar y gestionar una base de datos
 Para utilizar PostgreSQL 16 con el proyecto:
 
 1. Asegúrate de tener PostgreSQL 16 instalado en tu entorno.
-2. Configura los parámetros de conexión en el archivo `auth.py` o `modelo.py`.
+2. Configura los parámetros de conexión en el archivo `modelo.py` o en el lugar correspondiente.
 
 ### Configuración
 
-Añade la información de conexión a PostgreSQL 16 en el archivo correspondiente (`auth.py` o `modelo.py`). Por ejemplo:
+Añade la información de conexión a PostgreSQL 16 en el archivo correspondiente (`modelo.py`, u otro lugar relevante). Por ejemplo:
 
 ```python
 # Configuración de la conexión a PostgreSQL 16
