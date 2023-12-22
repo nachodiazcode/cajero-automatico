@@ -42,4 +42,4 @@ Este proyecto se distribuye bajo la Licencia MIT, lo que permite la libre utiliz
 
 ---
 
-¡Gracias por elegir nuestro cajero automático!
+Programado 100% Python por NachoDíaz
