@@ -28,6 +28,7 @@ Para utilizar el programa:
 
 El programa muestra un menú interactivo en la terminal. Selecciona una opción ingresando su número correspondiente.
 
+
 ## Funcionalidad de Autenticación (Auth)
 
 ### Descripción
@@ -44,6 +45,7 @@ La autenticación proporciona dos funciones principales:
 ### Implementación
 
 La lógica de autenticación se encuentra en el archivo `auth.py`, el cual contiene la clase `AuthManager`. Esta clase gestiona el registro e inicio de sesión de usuarios mediante el uso de un diccionario para almacenar los nombres de usuario y las contraseñas.
+
 
 ## Conexión a la Base de Datos PostgreSQL 16
 
