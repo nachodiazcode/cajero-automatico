@@ -1,6 +1,11 @@
 class AuthManager:
     def __init__(self):
         self.usuarios = {}  # Almacena los usuarios registrados: {username: password}
+        
+    def mostrar_usuarios_registrados(self):
+        print("Usuarios registrados:")
+        for usuario in self.usuarios:
+            print("-", usuario)
 
     def registrarse(self):
         print("Registrarse")
