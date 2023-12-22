@@ -1,8 +1,7 @@
 class CajeroAutomatico:
     def __init__(self):
         self.saldo = 0
-            
-
+    
     def depositarSaldo(self):
         print("Ingresar Saldo")
         monto = float(input("Ingrese monto a depositar: "))

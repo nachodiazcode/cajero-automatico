@@ -1,5 +1,13 @@
 [
     {
+        "label": "AuthManager",
+        "importPath": "auth",
+        "description": "auth",
+        "isExtraImport": true,
+        "detail": "auth",
+        "documentation": {}
+    },
+    {
         "label": "CajeroAutomatico",
         "importPath": "model",
         "description": "model",
@@ -16,6 +24,15 @@
         "documentation": {}
     },
     {
+        "label": "psycopg2",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "psycopg2",
+        "description": "psycopg2",
+        "detail": "psycopg2",
+        "documentation": {}
+    },
+    {
         "label": "CajeroController",
         "importPath": "controller",
         "description": "controller",
@@ -24,12 +41,39 @@
         "documentation": {}
     },
     {
+        "label": "AuthManager",
+        "kind": 6,
+        "importPath": "auth",
+        "description": "auth",
+        "peekOfCode": "class AuthManager:\n    def __init__(self):\n        self.usuarios = {}  # Almacena los usuarios registrados: {username: password}\n    def registrarse(self):\n        print(\"Registrarse\")\n        nuevo_usuario = input(\"Ingrese un nombre de usuario: \")\n        nueva_contraseña = input(\"Ingrese una contraseña: \")\n        if nuevo_usuario in self.usuarios:\n            print(\"El usuario ya existe. Por favor, elija otro nombre de usuario.\")\n        else:",
+        "detail": "auth",
+        "documentation": {}
+    },
+    {
         "label": "CajeroController",
         "kind": 6,
         "importPath": "controller",
         "description": "controller",
-        "peekOfCode": "class CajeroController:\n    def __init__(self):\n        self.cajero = CajeroAutomatico()\n        self.view = CajeroView()\n    def run(self):\n        while True:\n            self.view.show_menu()\n            option = int(input(\"Ingrese una opción: \"))\n            if option == 1:\n                self.cajero.depositarSaldo()",
+        "peekOfCode": "class CajeroController:\n    def __init__(self):\n        self.cajero = CajeroAutomatico()\n        self.view = CajeroView()\n        self.auth = AuthManager()\n    def run(self):\n        while True:\n            self.view.show_menu()\n            option = int(input(\"Ingrese una opción: \"))\n            if option == 0:",
         "detail": "controller",
+        "documentation": {}
+    },
+    {
+        "label": "connect_to_db",
+        "kind": 2,
+        "importPath": "db",
+        "description": "db",
+        "peekOfCode": "def connect_to_db():\n    try:\n        # Configura los parámetros de conexión\n        db_config = {\n            'host': 'localhost',\n            'database': 'transacciones_db',\n            'user': 'postgres',\n            'password': 'admin'\n        }\n        # Establece la conexión",
+        "detail": "db",
+        "documentation": {}
+    },
+    {
+        "label": "connection",
+        "kind": 5,
+        "importPath": "db",
+        "description": "db",
+        "peekOfCode": "connection = connect_to_db()\nif connection:\n    try:\n        cursor = connection.cursor()\n        cursor.execute(\"SELECT version();\")\n        version = cursor.fetchone()\n        print(\"Versión de PostgreSQL:\", version)\n        cursor.close()\n    except psycopg2.Error as e:\n        print(\"Error al ejecutar la consulta:\", e)",
+        "detail": "db",
         "documentation": {}
     },
     {
@@ -46,7 +90,7 @@
         "kind": 6,
         "importPath": "view",
         "description": "view",
-        "peekOfCode": "class CajeroView:\n    @staticmethod\n    def show_menu():\n        print(\"\\nOpciones del menú\\n\")\n        print(\"1. Depositar Saldo\")\n        print(\"2. Girar saldo\")\n        print(\"3. Ver Saldo en la cuenta\")\n        print(\"4. Salir\")",
+        "peekOfCode": "class CajeroView:\n    @staticmethod\n    def show_menu():\n        print(\"\\nOpciones del menú\\n\")\n        print(\"0. Registrarse\")\n        print(\"1. Iniciar sesión\")\n        print(\"2. Depositar Saldo\")\n        print(\"3. Girar saldo\")\n        print(\"4. Ver Saldo en la cuenta\")\n        print(\"5. Salir\")",
         "detail": "view",
         "documentation": {}
     }
