@@ -42,4 +42,4 @@ Este proyecto se distribuye bajo la Licencia MIT, lo que permite la libre utiliz
 
 ---
 
-Programado 100% Python por NachoDíazCode
+Programado 100% en Python por NachoDíazCode
