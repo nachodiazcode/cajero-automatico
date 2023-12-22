@@ -52,3 +52,29 @@ Para registrar un nuevo usuario:
 ```python
 auth_manager = AuthManager()
 auth_manager.registrarse()
+
+## Conexión a la Base de Datos PostgreSQL 16
+
+### Descripción
+
+El proyecto ahora incluye la capacidad de conectar y gestionar una base de datos PostgreSQL 16 para almacenar la información del cajero automático.
+
+### Implementación
+
+Para utilizar PostgreSQL 16 con el proyecto:
+
+1. Asegúrate de tener PostgreSQL 16 instalado en tu entorno.
+2. Configura los parámetros de conexión en el archivo `auth.py` o `modelo.py`.
+
+### Configuración
+
+Añade la información de conexión a PostgreSQL 16 en el archivo correspondiente (`auth.py` o `modelo.py`). Por ejemplo:
+
+```python
+# Configuración de la conexión a PostgreSQL 16
+db_config = {
+    'host': 'localhost',
+    'database': 'nombre_de_la_base_de_datos',
+    'user': 'usuario',
+    'password': 'contraseña'
+}
