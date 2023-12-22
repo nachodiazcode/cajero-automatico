@@ -1,6 +1,6 @@
 # Cajero Automático
 
-![Cajero Automático](url_de_la_imagen.jpg)
+![Cajero Automático](cajero-automatico.png)
 
 Este proyecto implementa un cajero automático en Python con las siguientes funcionalidades:
 
